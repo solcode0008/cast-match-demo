@@ -615,55 +615,6 @@
         <div id="cast-container"></div>
 
     </div>
-
-    <script>
-        // 画像準拠：ダークダッシュボードUI用レーダーチャート設定
-        const ctx = document.getElementById('performanceChart').getContext('2d');
-
-        new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: ['演技力', 'アクション', '現場安定度', '柔軟性', 'ビジュアル'],
-                datasets: [{
-                    data: [4.7, 4.9, 4.5, 4.3, 4.8],
-                    backgroundColor: 'rgba(168, 32, 54, 0.45)', // 画像のような濃い赤の不透明度高めの塗り
-                    borderColor: '#af233a',
-                    borderWidth: 1.5,
-                    pointBackgroundColor: '#ffffff',
-                    pointBorderColor: '#af233a',
-                    pointBorderWidth: 1,
-                    pointRadius: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    r: {
-                        grid: {
-                            color: '#2d2d2d', // 薄いグリッド線
-                            lineWidth: 1
-                        },
-                        angleLines: {
-                            color: '#2d2d2d'
-                        },
-                        pointLabels: {
-                            color: '#999',
-                            font: {
-                                size: 12
-                            }
-                        },
-                        ticks: { display: false },
-                        min: 0,
-                        max: 5
-                    }
-                }
-            }
-        });
-    </script>
     <script src="app.js"></script>
 </body>
 
